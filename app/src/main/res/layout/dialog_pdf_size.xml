@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp30"
+        android:background="@drawable/home_shape_dialog_sort"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_letter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_letter"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_letter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_letter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_a4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_a4"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_a4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_a4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_legal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_legal"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_legal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_legal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_legal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_a3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_a3"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_a3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_a3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_a5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_a5"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_a5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_a5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_a5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp14"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp14"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tv_bc"
+                style="@style/AllDialogPdfSizeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/pdf_settings_size_bussiness_card"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_bc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdf_size_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

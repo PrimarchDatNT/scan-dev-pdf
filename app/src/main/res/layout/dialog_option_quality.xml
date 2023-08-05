@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:background="@drawable/home_shape_dialog_sort"
+        android:paddingBottom="@dimen/dp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/all_share_quality"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rg_quality"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@id/tv_quality">
+
+            <RadioButton
+                android:id="@+id/rb_low"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_low"
+                android:textColor="@drawable/all_selector_status_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_medium"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_hight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_high"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_max"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_max"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

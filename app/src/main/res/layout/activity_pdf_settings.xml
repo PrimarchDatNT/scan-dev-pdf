@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.pdfsettings.PdfSettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/all_vector_back_black"
+        app:title="@string/pdf_settings_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_tick_done"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@null"
+        android:onClick="onTickClick"
+        android:paddingStart="@dimen/dp20"
+        android:paddingEnd="@dimen/dp20"
+        android:src="@drawable/all_vector_tick"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_container_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="?selectableItemBackground"
+        android:onClick="setPageOrientation"
+        android:orientation="vertical"
+        android:padding="@dimen/dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pdf_orientation"
+            style="@style/PdfSettingsTextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pdf_settings_page_orientation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_orientation"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:src="@drawable/pdf_settings_vector_portrait"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_content_pdf_orientation"
+                style="@style/PdfSettingsTextViewContent"
+                android:layout_marginStart="5dp"
+                android:text="@string/pdf_settings_portrait" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:onClick="setPageSize"
+        android:orientation="vertical"
+        android:padding="@dimen/dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_container_one">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pdf_page_size"
+            style="@style/PdfSettingsTextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pdf_settings_page_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_content_pdf_page_size"
+            style="@style/PdfSettingsTextViewContent"
+            android:text="@string/pdf_settings_size_a4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:onClick="setPageNumber"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp20"
+        android:weightSum="10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_container_two">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pdf_page_number"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pdf_settings_page_number" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_content_pdf_page_number"
+                style="@style/PdfSettingsTextViewContent"
+                android:text="@string/pdf_settings_show_page_number" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/sw_pdf_page_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:checked="true"
+            android:theme="@style/switchStyle"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:onClick="setPageMargin"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp20"
+        android:weightSum="10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_container_three">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pdf_page_margin"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pdf_settings_page_margin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_content_pdf_page_margin"
+                style="@style/PdfSettingsTextViewContent"
+                android:text="@string/pdf_settings_no_margin_page" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/sw_pdf_page_margin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:theme="@style/switchStyle"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.2"
+        android:background="@color/color_text_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb" />
+
+    <ProgressBar
+        android:id="@+id/pb_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp30"
+        android:paddingEnd="@dimen/dp30"
+        app:layout_constraintTop_toBottomOf="@id/pb_convert" />
+
+    <FrameLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        ads:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

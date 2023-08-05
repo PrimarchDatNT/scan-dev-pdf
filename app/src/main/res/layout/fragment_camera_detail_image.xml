@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="onClickBackPress"
+        android:padding="14dp"
+        android:src="@drawable/enhance_vector_nagivation_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:text="@string/camera_preview_title"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_type_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="14dp"
+        android:src="@drawable/camera_vector_preview_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_slide_page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/iv_delete"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_preview_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/iv_delete"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        app:spanCount="3"
+        tools:listitem="@layout/item_save_document" />
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        app:layout_constraintBottom_toTopOf="@id/iv_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="4/5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_recapture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_delete_spotlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_vector_delete_gray"
+        app:layout_constraintBottom_toBottomOf="@id/iv_delete"
+        app:layout_constraintEnd_toEndOf="@id/iv_delete"
+        app:layout_constraintStart_toStartOf="@id/iv_delete"
+        app:layout_constraintTop_toTopOf="@id/iv_delete" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_recapture"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackground"
+        android:padding="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_tick_done"
+        app:layout_constraintStart_toEndOf="@id/iv_delete" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_recapture_spotlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_vector_recapture"
+        app:layout_constraintBottom_toBottomOf="@id/iv_recapture"
+        app:layout_constraintEnd_toEndOf="@id/iv_recapture"
+        app:layout_constraintStart_toStartOf="@id/iv_recapture"
+        app:layout_constraintTop_toTopOf="@id/iv_recapture" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_tick_done"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackground"
+        android:padding="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_recapture" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_tick_done_spolight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_vector_tick_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_tick_done"
+        app:layout_constraintEnd_toEndOf="@id/iv_tick_done"
+        app:layout_constraintStart_toStartOf="@id/iv_tick_done"
+        app:layout_constraintTop_toTopOf="@id/iv_tick_done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

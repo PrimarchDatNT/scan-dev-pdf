@@ -1,0 +1,71 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="fontFamily">@font/google_sans_medium</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BottomDialog" parent="@style/BaseBottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BackgroundTransparent</item>
+    </style>
+
+    <style name="BackgroundTransparent" parent="@style/BaseBottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="switchStyle" parent="AppTheme">
+        <item name="colorAccent">@color/color_text_orange</item>
+        <item name="colorSwitchThumbNormal">@color/color_black</item>
+        <item name="android:colorForeground">@color/color_black</item>
+        <!--        <item name="android:textColorSecondary">@color/color_gray_dark</item>-->
+    </style>
+
+    <style name="AllButtonIcon">
+        <item name="android:layout_width">@dimen/dp30</item>
+        <item name="android:layout_height">@dimen/dp30</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:padding">@dimen/dp4</item>
+    </style>
+
+    <style name="AllTextView">
+        <item name="android:textColor">@color/color_text_gray</item>
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="AllDialogPdfSizeTextView">
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="PdfSettingsTextViewTitle">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="PdfSettingsTextViewContent">
+        <item name="android:textColor">@color/color_text_orange</item>
+        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SettingsTextViewContent">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Toolbar.TextTilte" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

@@ -1,0 +1,446 @@
+<resources>
+  <dimen name="dp2">
+    2.7dp
+  </dimen>
+  <dimen name="dp3">
+    4.0dp
+  </dimen>
+  <dimen name="dp4">
+    5.3dp
+  </dimen>
+  <dimen name="dp6">
+    8.0dp
+  </dimen>
+  <dimen name="dp8">
+    10.7dp
+  </dimen>
+  <dimen name="dp10">
+    13.3dp
+  </dimen>
+  <dimen name="dp12">
+    16.0dp
+  </dimen>
+  <dimen name="dp14">
+    18.7dp
+  </dimen>
+  <dimen name="dp16">
+    21.3dp
+  </dimen>
+  <dimen name="dp18">
+    24.0dp
+  </dimen>
+  <dimen name="dp20">
+    26.7dp
+  </dimen>
+  <dimen name="dp22">
+    29.3dp
+  </dimen>
+  <dimen name="dp24">
+    32.0dp
+  </dimen>
+  <dimen name="dp26">
+    34.7dp
+  </dimen>
+  <dimen name="dp28">
+    37.3dp
+  </dimen>
+  <dimen name="dp30">
+    40.0dp
+  </dimen>
+  <dimen name="dp32">
+    42.7dp
+  </dimen>
+  <dimen name="dp34">
+    45.3dp
+  </dimen>
+  <dimen name="dp36">
+    48.0dp
+  </dimen>
+  <dimen name="dp38">
+    50.7dp
+  </dimen>
+  <dimen name="dp40">
+    53.3dp
+  </dimen>
+  <dimen name="dp44">
+    58.7dp
+  </dimen>
+  <dimen name="dp48">
+    64.0dp
+  </dimen>
+  <dimen name="dp50">
+    66.7dp
+  </dimen>
+  <dimen name="dp54">
+    72.0dp
+  </dimen>
+  <dimen name="dp60">
+    80.0dp
+  </dimen>
+  <dimen name="dp62">
+    82.7dp
+  </dimen>
+  <dimen name="dp70">
+    93.3dp
+  </dimen>
+  <dimen name="dp80">
+    106.7dp
+  </dimen>
+  <dimen name="dp100">
+    133.3dp
+  </dimen>
+  <dimen name="dp120">
+    160.0dp
+  </dimen>
+  <dimen name="dp140">
+    186.7dp
+  </dimen>
+  <dimen name="dp160">
+    213.3dp
+  </dimen>
+  <dimen name="dp180">
+    240.0dp
+  </dimen>
+  <dimen name="dp200">
+    266.7dp
+  </dimen>
+  <dimen name="dp220">
+    293.3dp
+  </dimen>
+  <dimen name="dp240">
+    320.0dp
+  </dimen>
+  <dimen name="dp250">
+    333.3dp
+  </dimen>
+  <dimen name="dp260">
+    346.7dp
+  </dimen>
+  <dimen name="dp270">
+    360.0dp
+  </dimen>
+  <dimen name="dp280">
+    373.3dp
+  </dimen>
+  <dimen name="dp300">
+    400.0dp
+  </dimen>
+  <dimen name="dp320">
+    426.7dp
+  </dimen>
+  <dimen name="dp350">
+    466.7dp
+  </dimen>
+  <dimen name="dp400">
+    533.3dp
+  </dimen>
+  <dimen name="sp2">
+    2sp
+  </dimen>
+  <dimen name="sp4">
+    4sp
+  </dimen>
+  <dimen name="sp6">
+    6sp
+  </dimen>
+  <dimen name="sp8">
+    8sp
+  </dimen>
+  <dimen name="sp10">
+    10sp
+  </dimen>
+  <dimen name="sp12">
+    12sp
+  </dimen>
+  <dimen name="sp14">
+    14sp
+  </dimen>
+  <dimen name="sp16">
+    16sp
+  </dimen>
+  <dimen name="sp18">
+    18sp
+  </dimen>
+  <dimen name="sp20">
+    20sp
+  </dimen>
+  <dimen name="sp22">
+    22sp
+  </dimen>
+  <dimen name="sp24">
+    24sp
+  </dimen>
+  <dimen name="sp26">
+    26sp
+  </dimen>
+  <dimen name="sp28">
+    28sp
+  </dimen>
+  <dimen name="sp30">
+    30sp
+  </dimen>
+  <dimen name="sp34">
+    34sp
+  </dimen>
+  <dimen name="sp38">
+    38sp
+  </dimen>
+  <dimen name="sp40">
+    40sp
+  </dimen>
+  <dimen name="fab_margin">
+    21.3dp
+  </dimen>
+  <dimen name="grid_0">
+    2.7dp
+  </dimen>
+  <dimen name="grid_0_5">
+    2.7dp
+  </dimen>
+  <dimen name="grid_0_5_negative">
+    -2.7dp
+  </dimen>
+  <dimen name="grid_1">
+    5.3dp
+  </dimen>
+  <dimen name="grid_1_5">
+    8.0dp
+  </dimen>
+  <dimen name="grid_1_5_negative">
+    -8.0dp
+  </dimen>
+  <dimen name="grid_10">
+    53.3dp
+  </dimen>
+  <dimen name="grid_11">
+    58.7dp
+  </dimen>
+  <dimen name="grid_12">
+    64.0dp
+  </dimen>
+  <dimen name="grid_13">
+    69.3dp
+  </dimen>
+  <dimen name="grid_14">
+    74.7dp
+  </dimen>
+  <dimen name="grid_15">
+    80.0dp
+  </dimen>
+  <dimen name="grid_16">
+    85.3dp
+  </dimen>
+  <dimen name="grid_17">
+    90.7dp
+  </dimen>
+  <dimen name="grid_18">
+    96.0dp
+  </dimen>
+  <dimen name="grid_19">
+    101.3dp
+  </dimen>
+  <dimen name="grid_1_negative">
+    -5.3dp
+  </dimen>
+  <dimen name="grid_2">
+    10.7dp
+  </dimen>
+  <dimen name="grid_2_5">
+    13.3dp
+  </dimen>
+  <dimen name="grid_2_5_negative">
+    -13.3dp
+  </dimen>
+  <dimen name="grid_20">
+    106.7dp
+  </dimen>
+  <dimen name="grid_21">
+    112.0dp
+  </dimen>
+  <dimen name="grid_22">
+    117.3dp
+  </dimen>
+  <dimen name="grid_23">
+    122.7dp
+  </dimen>
+  <dimen name="grid_24">
+    128.0dp
+  </dimen>
+  <dimen name="grid_25">
+    133.3dp
+  </dimen>
+  <dimen name="grid_26">
+    138.7dp
+  </dimen>
+  <dimen name="grid_27">
+    144.0dp
+  </dimen>
+  <dimen name="grid_28">
+    149.3dp
+  </dimen>
+  <dimen name="grid_29">
+    154.7dp
+  </dimen>
+  <dimen name="grid_2_half">
+    13.3dp
+  </dimen>
+  <dimen name="grid_2_negative">
+    -10.7dp
+  </dimen>
+  <dimen name="grid_3">
+    16.0dp
+  </dimen>
+  <dimen name="grid_3_5">
+    18.7dp
+  </dimen>
+  <dimen name="grid_3_5_negative">
+    -18.7dp
+  </dimen>
+  <dimen name="grid_30">
+    160.0dp
+  </dimen>
+  <dimen name="grid_32">
+    170.7dp
+  </dimen>
+  <dimen name="grid_35">
+    186.7dp
+  </dimen>
+  <dimen name="grid_38">
+    202.7dp
+  </dimen>
+  <dimen name="grid_3_negative">
+    -16.0dp
+  </dimen>
+  <dimen name="grid_4">
+    21.3dp
+  </dimen>
+  <dimen name="grid_4_5">
+    24.0dp
+  </dimen>
+  <dimen name="grid_4_5_negative">
+    -24.0dp
+  </dimen>
+  <dimen name="grid_40">
+    213.3dp
+  </dimen>
+  <dimen name="grid_41">
+    218.7dp
+  </dimen>
+  <dimen name="grid_43">
+    229.3dp
+  </dimen>
+  <dimen name="grid_44">
+    234.7dp
+  </dimen>
+  <dimen name="grid_45">
+    240.0dp
+  </dimen>
+  <dimen name="grid_46">
+    245.3dp
+  </dimen>
+  <dimen name="grid_4_negative">
+    -21.3dp
+  </dimen>
+  <dimen name="grid_5">
+    26.7dp
+  </dimen>
+  <dimen name="grid_50">
+    266.7dp
+  </dimen>
+  <dimen name="grid_55">
+    293.3dp
+  </dimen>
+  <dimen name="grid_56">
+    298.7dp
+  </dimen>
+  <dimen name="grid_57">
+    304.0dp
+  </dimen>
+  <dimen name="grid_58">
+    309.3dp
+  </dimen>
+  <dimen name="grid_5_negative">
+    -26.7dp
+  </dimen>
+  <dimen name="grid_6">
+    32.0dp
+  </dimen>
+  <dimen name="grid_60">
+    320.0dp
+  </dimen>
+  <dimen name="grid_7">
+    37.3dp
+  </dimen>
+  <dimen name="grid_70">
+    373.3dp
+  </dimen>
+  <dimen name="grid_74">
+    394.7dp
+  </dimen>
+  <dimen name="grid_78">
+    416.0dp
+  </dimen>
+  <dimen name="grid_8">
+    42.7dp
+  </dimen>
+  <dimen name="grid_9">
+    48.0dp
+  </dimen>
+  <dimen name="grid_90">
+    480.0dp
+  </dimen>
+  <item name="dp_button_padding_bottom" type="dimen">
+    @dimen/dp_button_padding_vertical
+  </item>
+  <item name="dp_button_padding_end" type="dimen">
+    @dimen/dp_button_padding_horizontal
+  </item>
+  <item name="dp_button_padding_horizontal" type="dimen">
+    @dimen/dp16
+  </item>
+  <item name="dp_button_padding_start" type="dimen">
+    @dimen/dp_button_padding_horizontal
+  </item>
+  <item name="dp_button_padding_top" type="dimen">
+    @dimen/dp_button_padding_vertical
+  </item>
+  <dimen name="dp_button_padding_vertical">
+    0.0dp
+  </dimen>
+  <item name="dp_button_min_height" type="dimen">
+    @dimen/grid_11
+  </item>
+  <dimen name="dp_button_pressed_elevation_translation">
+    -1.3dp
+  </dimen>
+  <dimen name="dp_button_normal_elevation">
+    2.7dp
+  </dimen>
+  <dimen name="dp_button_disabled_elevation">
+    0.0dp
+  </dimen>
+  <item name="dp_button_focus_stroke_width" type="dimen">
+    @dimen/grid_1
+  </item>
+  <item name="dp_button_corner_radius" type="dimen">
+    @dimen/grid_0_5
+  </item>
+  <item name="dp_button_outline_stroke_width" type="dimen">
+    @dimen/grid_0_5
+  </item>
+  <dimen name="dp_button_focus_stroke_corner_radius">
+    0.0dp
+  </dimen>
+  <dimen name="text_size_caption">
+    11sp
+  </dimen>
+  <dimen name="main_scan_button_padding">
+    26.7dp
+  </dimen>
+  <dimen name="main_scan_button_inner_shadow_stroke">
+    2.7dp
+  </dimen>
+  <dimen name="text_margin">
+    21.3dp
+  </dimen>
+</resources>

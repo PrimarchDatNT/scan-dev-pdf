@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:background="@drawable/home_shape_dialog_sort"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:text="@string/all_share_title"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_border"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_rename"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/all_shape_editext_rename_share"
+            android:gravity="center|start"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintTop_toBottomOf="@id/view_border"
+            tools:text="Nguyen Xuan Nam" />
+
+        <EditText
+            android:id="@+id/et_rename"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/all_shape_editext_rename_share"
+            android:inputType="text"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/view_border" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rename"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:padding="@dimen/dp14"
+            android:src="@drawable/all_vector_rename_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_border" />
+
+        <TextView
+            android:id="@+id/tv_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/all_share_quality"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintTop_toBottomOf="@id/iv_rename" />
+
+        <RadioGroup
+            android:id="@+id/rg_quality"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@id/tv_quality">
+
+            <RadioButton
+                android:id="@+id/rb_low"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_low"
+                android:textColor="@drawable/all_selector_status_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_medium"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_hight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_high"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+            <RadioButton
+                android:id="@+id/rb_max"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@android:color/transparent"
+                android:drawableTop="@drawable/all_selector_status_radiobutton"
+                android:gravity="center"
+                android:text="@string/all_share_quality_max"
+                android:textColor="@drawable/all_selector_status_color_radiobutton" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_pdf_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="?attr/selectableItemBackground"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp16"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp16"
+            android:text="@string/pdf_settings_title"
+            android:textSize="@dimen/sp16"
+            app:drawableEndCompat="@drawable/all_vector_direct_right"
+            app:layout_constraintTop_toBottomOf="@id/rg_quality" />
+
+        <View
+            android:id="@+id/view_border_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp14"
+            android:background="@color/color_border"
+            app:layout_constraintTop_toBottomOf="@id/tv_pdf_settings" />
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/color_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_border_2" />
+
+        <LinearLayout
+            android:id="@+id/ll_save_pdf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/ll_save_jpg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_border_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/home_vector_sendto_option_pdf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:text="@string/all_share_save_as_pdf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_save_jpg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_save_pdf"
+            app:layout_constraintTop_toBottomOf="@id/view_border_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/home_vector_sendto_option_jpg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:text="@string/all_share_save_as_jpg" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_bolder_3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_border"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/ll_save_pdf" />
+
+        <LinearLayout
+            android:id="@+id/ll_share_pdf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/ll_share_jpg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_bolder_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/all_vector_sendto_share_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:text="@string/all_share_pdf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share_jpg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_save_pdf"
+            app:layout_constraintTop_toBottomOf="@id/view_bolder_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/all_vector_sendto_share_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:text="@string/all_share_jpg" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

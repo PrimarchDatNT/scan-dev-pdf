@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_save_document"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_document_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp14"
+        android:layout_marginEnd="@dimen/dp14"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/all_loading_place_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="102:135"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.4"
+        android:background="@color/ad_label"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_document_item"
+        app:layout_constraintEnd_toEndOf="@id/iv_document_item"
+        app:layout_constraintStart_toStartOf="@id/iv_document_item"
+        app:layout_constraintTop_toTopOf="@id/iv_document_item" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/all_vector_tick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_document_item"
+        app:layout_constraintEnd_toEndOf="@id/iv_document_item"
+        app:layout_constraintStart_toStartOf="@id/iv_document_item"
+        app:layout_constraintTop_toTopOf="@id/iv_document_item" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_delete_icon"
+        android:layout_width="@dimen/dp26"
+        android:layout_height="@dimen/dp26"
+        android:adjustViewBounds="true"
+        android:src="@drawable/save_vector_delete_icon"
+        app:layout_constraintBottom_toTopOf="@id/iv_document_item"
+        app:layout_constraintEnd_toEndOf="@id/iv_document_item"
+        app:layout_constraintStart_toEndOf="@id/iv_document_item"
+        app:layout_constraintTop_toTopOf="@id/iv_document_item"
+        tool:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_number_counter"
+        android:layout_width="@dimen/dp28"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dp6"
+        android:layout_marginBottom="@dimen/dp6"
+        android:background="@drawable/detail_shape_background_radius"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="@id/iv_document_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/iv_document_item"
+        tool:text="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

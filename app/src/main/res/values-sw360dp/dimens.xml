@@ -1,0 +1,157 @@
+<resources>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp14">14dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp22">22dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp26">26dp</dimen>
+    <dimen name="dp28">28dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp34">34dp</dimen>
+    <dimen name="dp36">36dp</dimen>
+    <dimen name="dp38">38dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp44">44dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp54">54dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp62">62dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp140">140dp</dimen>
+    <dimen name="dp160">160dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp220">220dp</dimen>
+    <dimen name="dp240">240dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp260">260dp</dimen>
+    <dimen name="dp270">270dp</dimen>
+    <dimen name="dp280">280dp</dimen>
+    <dimen name="dp300">300dp</dimen>
+    <dimen name="dp320">320dp</dimen>
+    <dimen name="dp350">350dp</dimen>
+    <dimen name="dp400">400dp</dimen>
+
+    <dimen name="sp2">2sp</dimen>
+    <dimen name="sp4">4sp</dimen>
+    <dimen name="sp6">6sp</dimen>
+    <dimen name="sp8">8sp</dimen>
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp22">22sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="sp26">26sp</dimen>
+    <dimen name="sp28">28sp</dimen>
+    <dimen name="sp30">30sp</dimen>
+    <dimen name="sp34">34sp</dimen>
+    <dimen name="sp38">38sp</dimen>
+    <dimen name="sp40">40sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="grid_0">2dp</dimen>
+    <dimen name="grid_0_5">2dp</dimen>
+    <dimen name="grid_0_5_negative">-2dp</dimen>
+    <dimen name="grid_1">4dp</dimen>
+    <dimen name="grid_1_5">6dp</dimen>
+    <dimen name="grid_1_5_negative">-6dp</dimen>
+    <dimen name="grid_10">40dp</dimen>
+    <dimen name="grid_11">44dp</dimen>
+    <dimen name="grid_12">48dp</dimen>
+    <dimen name="grid_13">52dp</dimen>
+    <dimen name="grid_14">56dp</dimen>
+    <dimen name="grid_15">60dp</dimen>
+    <dimen name="grid_16">64dp</dimen>
+    <dimen name="grid_17">68dp</dimen>
+    <dimen name="grid_18">72dp</dimen>
+    <dimen name="grid_19">76dp</dimen>
+    <dimen name="grid_1_negative">-4dp</dimen>
+    <dimen name="grid_2">8dp</dimen>
+    <dimen name="grid_2_5">10dp</dimen>
+    <dimen name="grid_2_5_negative">-10dp</dimen>
+    <dimen name="grid_20">80dp</dimen>
+    <dimen name="grid_21">84dp</dimen>
+    <dimen name="grid_22">88dp</dimen>
+    <dimen name="grid_23">92dp</dimen>
+    <dimen name="grid_24">96dp</dimen>
+    <dimen name="grid_25">100dp</dimen>
+    <dimen name="grid_26">104dp</dimen>
+    <dimen name="grid_27">108dp</dimen>
+    <dimen name="grid_28">112dp</dimen>
+    <dimen name="grid_29">116dp</dimen>
+    <dimen name="grid_2_half">10dp</dimen>
+    <dimen name="grid_2_negative">-8dp</dimen>
+    <dimen name="grid_3">12dp</dimen>
+    <dimen name="grid_3_5">14dp</dimen>
+    <dimen name="grid_3_5_negative">-14dp</dimen>
+    <dimen name="grid_30">120dp</dimen>
+    <dimen name="grid_32">128dp</dimen>
+    <dimen name="grid_35">140dp</dimen>
+    <dimen name="grid_38">152dp</dimen>
+    <dimen name="grid_3_negative">-12dp</dimen>
+    <dimen name="grid_4">16dp</dimen>
+    <dimen name="grid_4_5">18dp</dimen>
+    <dimen name="grid_4_5_negative">-18dp</dimen>
+    <dimen name="grid_40">160dp</dimen>
+    <dimen name="grid_41">164dp</dimen>
+    <dimen name="grid_43">172dp</dimen>
+    <dimen name="grid_44">176dp</dimen>
+    <dimen name="grid_45">180dp</dimen>
+    <dimen name="grid_46">184dp</dimen>
+    <dimen name="grid_4_negative">-16dp</dimen>
+    <dimen name="grid_5">20dp</dimen>
+    <dimen name="grid_50">200dp</dimen>
+    <dimen name="grid_55">220dp</dimen>
+    <dimen name="grid_56">224dp</dimen>
+    <dimen name="grid_57">228dp</dimen>
+    <dimen name="grid_58">232dp</dimen>
+    <dimen name="grid_5_negative">-20dp</dimen>
+    <dimen name="grid_6">24dp</dimen>
+    <dimen name="grid_60">240dp</dimen>
+    <dimen name="grid_7">28dp</dimen>
+    <dimen name="grid_70">280dp</dimen>
+    <dimen name="grid_74">296dp</dimen>
+    <dimen name="grid_78">312dp</dimen>
+    <dimen name="grid_8">32dp</dimen>
+    <dimen name="grid_9">36dp</dimen>
+    <dimen name="grid_90">360dp</dimen>
+
+    <item name="dp_button_padding_bottom" type="dimen">@dimen/dp_button_padding_vertical</item>
+    <item name="dp_button_padding_end" type="dimen">@dimen/dp_button_padding_horizontal</item>
+    <item name="dp_button_padding_horizontal" type="dimen">@dimen/dp16</item>
+    <item name="dp_button_padding_start" type="dimen">@dimen/dp_button_padding_horizontal</item>
+    <item name="dp_button_padding_top" type="dimen">@dimen/dp_button_padding_vertical</item>
+    <dimen name="dp_button_padding_vertical">0dp</dimen>
+    <item name="dp_button_min_height" type="dimen">@dimen/grid_11</item>
+    <dimen name="dp_button_pressed_elevation_translation">-1dp</dimen>
+    <dimen name="dp_button_normal_elevation">2dp</dimen>
+    <dimen name="dp_button_disabled_elevation">0dp</dimen>
+
+    <item name="dp_button_focus_stroke_width" type="dimen">@dimen/grid_1</item>
+    <item name="dp_button_corner_radius" type="dimen">@dimen/grid_0_5</item>
+    <item name="dp_button_outline_stroke_width" type="dimen">@dimen/grid_0_5</item>
+    <dimen name="dp_button_focus_stroke_corner_radius">0dp</dimen>
+
+    <dimen name="text_size_caption">11sp</dimen>
+
+    <dimen name="main_scan_button_padding">20dp</dimen>
+    <dimen name="main_scan_button_inner_shadow_stroke">2dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.enhance.EnhanceActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/iv_enhance_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@id/fl_menu_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_navigation_bar"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp54"
+        android:background="@color/color_white"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@id/iv_enhance_preview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_enhance_arrow"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="onClickBackPress"
+        android:padding="14dp"
+        android:src="@drawable/enhance_vector_nagivation_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/view_navigation_bar"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enhance_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/enhance_edit_header"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintBottom_toBottomOf="@id/view_navigation_bar"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_enhance_crop"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="onClickEnhanceCrop"
+        android:padding="14dp"
+        android:src="@drawable/enhance_vector_crop"
+        app:layout_constraintBottom_toBottomOf="@id/view_navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/bg_enhance_filter"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp8"
+        android:paddingBottom="@dimen/dp8"
+        app:layout_constraintBottom_toTopOf="@+id/fl_menu_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_original_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance_filter_mode_original"
+            android:onClick="onClickOriginal"
+            android:src="@drawable/enhance_selector_original"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_grey_scale_mode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_grey_scale_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginRight="@dimen/dp2"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance_filter_mode_grey_scale"
+            android:onClick="onCLickGreyScale"
+            android:src="@drawable/enhance_selector_grey_scale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_magic_color_mode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/iv_original_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_magic_color_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginRight="@dimen/dp2"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance_filter_mode_magic_color"
+            android:onClick="onClickMagicColor"
+            android:src="@drawable/enhance_selector_magic_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/iv_black_and_white_2_mode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/iv_grey_scale_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_black_and_white_2_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginStart="@dimen/dp2"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance"
+            android:onClick="onClickBlackAndWhite2"
+            android:padding="5.5dp"
+            android:src="@drawable/enhance_selector_bnw2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_black_and_white_mode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/iv_magic_color_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_black_and_white_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginStart="@dimen/dp2"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance"
+            android:onClick="onClickBlackAndWhite"
+            android:src="@drawable/enhance_selector_black_and_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_no_shadow_mode"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/iv_black_and_white_2_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_no_shadow_mode"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginStart="@dimen/dp2"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/enhance"
+            android:onClick="onClickNoShadow"
+            android:padding="5.5dp"
+            android:src="@drawable/enhance_selector_no_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/iv_black_and_white_mode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_trigon"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp12"
+        android:adjustViewBounds="true"
+        android:alpha="0.85"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_trigon"
+        app:layout_constraintEnd_toEndOf="@+id/layout_filter"
+        app:layout_constraintStart_toStartOf="@+id/layout_filter"
+        app:layout_constraintTop_toBottomOf="@+id/layout_filter" />
+
+    <FrameLayout
+        android:id="@+id/fl_menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_enhance_preview">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rotate"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp50"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickRotate"
+            android:padding="4dp"
+            android:src="@drawable/enhance_vector_rotate" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_enhance_filter"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickFilterTools"
+            android:padding="4dp"
+            android:src="@drawable/ic_filter"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_enhance_tick_icon"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickSave"
+            android:padding="4dp"
+            android:src="@drawable/all_vector_tick"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/view_overlay" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

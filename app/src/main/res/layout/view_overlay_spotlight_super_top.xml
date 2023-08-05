@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/color_black">
+
+    <TextView
+        android:id="@+id/tv_overlay_message_super_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:text="@string/main_target_utility_bar"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/close_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:background="@drawable/custom_spotlight_got_it"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp20"
+        android:paddingBottom="@dimen/dp8"
+        android:text="@string/spotlight_got_it"
+        android:textColor="@color/selector_spotlight_onclick"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintBottom_toBottomOf="@id/close_spotlight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/close_spotlight"
+        app:layout_constraintTop_toBottomOf="@id/tv_overlay_message_bottom" />
+
+    <TextView
+        android:id="@+id/tv_overlay_message_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp400"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/close_target"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        tools:text="@string/main_target_settings" />
+
+    <TextView
+        android:id="@+id/close_spotlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:background="?selectableItemBackground"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp20"
+        android:paddingBottom="@dimen/dp8"
+        android:text="@string/spotlight_target_skip"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintBottom_toBottomOf="@id/close_target"
+        app:layout_constraintEnd_toStartOf="@id/close_target"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_overlay_message_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

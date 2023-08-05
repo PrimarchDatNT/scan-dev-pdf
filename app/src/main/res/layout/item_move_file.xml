@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container_folder"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/all_ripple_background_white_click">
+
+    <View
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item_move"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:padding="13dp"
+        android:src="@drawable/move_vector_folder_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_folder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:ellipsize="marquee"
+        android:gravity="center|left"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="13dp"
+        android:singleLine="true"
+        android:text="@string/all_folders"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toRightOf="@id/iv_item_move"
+        app:layout_constraintRight_toLeftOf="@id/iv_item_select"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/iv_item_select"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/dp14"
+        android:paddingEnd="@dimen/dp14"
+        android:src="@drawable/all_vector_item_select"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,222 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+apply from: 'multiscreen.gradle'
+apply plugin: "com.bytedance.android.aabResGuard"
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.document.camerascanner"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 101
+        versionName "1.0.1"
+        flavorDimensions "default"
+
+        externalNativeBuild {
+            cmake {
+                //sample cpp flag parameters
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                //sample abi filter parameters
+                abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+                //set -DANDROID_STL to c++_shared
+                arguments '-DANDROID_STL=c++_shared', "-DOpenCV_DIR=" + "${System.getProperty("user.dir")}" + "/sdk/native/jni"
+            }
+
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "${System.getProperty("user.dir")}"+"/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'Scano2020'
+            keyPassword '#y+jP-N2pgf@<VU'
+            storeFile file('keystore/keystore.jks')
+            storePassword '#y+jP-N2pgf@<VU'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            proguardFiles 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    viewBinding.enabled = true
+
+    productFlavors {
+        v_Develop_ {
+            versionName "develop"
+            buildConfigField "Boolean", "DEBUG_ENABLE", "true"
+        }
+        v_Test_ {
+            versionName "test"
+            buildConfigField "Boolean", "DEBUG_ENABLE", "true"
+        }
+        v_Official_ {
+            buildConfigField "Boolean", "DEBUG_ENABLE", "false"
+        }
+    }
+
+
+    variantFilter { variant ->
+        def fvName = variant.flavors*.name
+        def buildType = variant.buildType.name
+
+        if ((buildType == "release" && fvName.contains("v_Develop_")) ||
+                (buildType == "debug" && fvName.contains("v_Test_")) ||
+                (buildType == "debug" && fvName.contains("v_Official_"))) {
+            setIgnore(true)
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def versionName = variant.versionName
+            if (versionName != "develop" && versionName != "test") {
+                versionName = "v" + versionName
+            }
+            def format = "yyyyMMdd_HHmm"
+            def time = new SimpleDateFormat(format).format(new Date())
+            def buildType = variant.buildType.name
+            outputFileName = versionName + "_" + time + "_" + buildType + ".apk"
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion '20.0.5594570'
+
+}
+
+aabResGuard {
+    mappingFile = file("../mapping.txt").toPath()
+    whiteList = [ // White list rules
+                  // your icon
+                  "*.R.mipmap.ic_launcher",
+                  //for fabric
+                  "*.R.string.com.crashlytics.*",
+                  // for google-services
+                  "*.R.string.google_app_id",
+                  "*.R.string.gcm_defaultSenderId",
+                  "*.R.string.default_web_client_id",
+                  "*.R.string.firebase_database_url",
+                  "*.R.string.google_api_key",
+                  "*.R.string.google_crash_reporting_api_key",
+                  "*.R.string.project_id",
+
+                  "*.R.id.*",
+                  "*.R.dimen.dp*",
+
+                  "*.R.string.google_maps_key"
+    ]
+    obfuscatedBundleFileName = "obfuscated-final.aab" // File aab được mã hoá sẽ có tên như này
+    mergeDuplicatedRes = true // Whether to allow the merge of duplicate resources
+    enableFilterFiles = true // Whether to allow filter files
+    filterList = [ // file filter rules
+                   "META-INF/*"
+    ]
+
+    enableFilterStrings = true // switch of filter strings
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':sdk')
+
+    //<editor-fold desc="GOOGLE LIBRARIES">
+    //<editor-fold desc="ANDROIDX LIBRARIES">
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //</editor-fold>
+
+    implementation 'com.google.android.play:core:1.8.3'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation 'com.android.installreferrer:installreferrer:2.1'
+
+    //<editor-fold desc="FIREBASE LIBRARIES">
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    //</editor-fold>
+
+    //<editor-fold desc="AD LIBRARIES">
+    implementation 'com.google.firebase:firebase-ads:19.5.0'
+    implementation 'com.google.ads.mediation:facebook:5.11.0.0'
+    //</editor-fold>
+
+    //<editor-fold desc="CAMERAX LIBRARIES">
+    implementation 'androidx.camera:camera-core:1.0.0-beta12'
+    implementation 'androidx.camera:camera-camera2:1.0.0-beta12'
+    implementation 'androidx.camera:camera-lifecycle:1.0.0-beta12'
+    implementation 'androidx.camera:camera-view:1.0.0-alpha19'
+    implementation 'androidx.camera:camera-extensions:1.0.0-alpha19'
+    //</editor-fold>
+    //</editor-fold>
+
+    //<editor-fold desc="FUNCTION LIBRARIES">
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
+
+    implementation "org.permissionsdispatcher:permissionsdispatcher:4.7.0"
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:4.7.0"
+
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'com.madgag:scpkix-jdk15on:1.47.0.1'
+    //</editor-fold>
+
+    //<editor-fold desc="UI/UX LIBRARIES">
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.airbnb.android:lottie:3.5.0'
+    implementation 'com.github.takusemba:spotlight:2.0.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //</editor-fold>
+
+    //roomDatabase
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation 'androidx.room:room-rxjava2:2.2.5'
+    implementation 'androidx.room:room-guava:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    //stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.UnifiedNativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tt_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/ad_label"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp6"
+            android:paddingEnd="@dimen/dp6"
+            android:text="Ad"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ads"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginBottom="@dimen/dp8"
+            android:scaleType="fitXY"
+            android:src="@drawable/all_vector_placeholder_ad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tt_ad" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_ads"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:maxLines="3"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ads"
+            app:layout_constraintEnd_toStartOf="@+id/bt_cta_ads"
+            app:layout_constraintStart_toEndOf="@+id/iv_ads"
+            app:layout_constraintTop_toTopOf="@id/iv_ads"
+            tools:ignore="RtlHardcoded"
+            tools:text="This is title This is title This is title This is title This is title This is title This is title This is title This is title This is title This is title This is title This is titleThis is title This is title This is title This is title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_cta_ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:background="@drawable/all_shape_ads_button"
+            android:minHeight="0dp"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/color_text_orange"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ads"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_ads"
+            tools:text="Visit site Visit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.formats.UnifiedNativeAdView>

@@ -1,0 +1,282 @@
+<resources>
+    <!--<editor-fold desc="App Name">-->
+    <string name="app_name" translatable="false">Scano</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="String with special characters">-->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="home_file_title">%s %d %d</string>
+    <string name="home_send_to_size_mb">(%.2fMB)</string>
+    <string name="home_send_to_size_kb">(%.2fKb)</string>
+    <string name="home_created_folder_name">Scano_%s</string>
+    <string name="home_created_pdf_name">%s</string>
+    <string name="detail_page_current_page">Page %d/%d</string>
+    <string name="camera_request_permission_message"> Please grant %s permission to scan document.\nTo grant %s
+        permission, please click Go to Settings below and activate %s under %s permission
+    </string>
+    <string name="storage_request_permission_message">Please grant %s permission to access your photo
+        gallery and import/export photos.\nTo grant %s permission, please click Go to Settings below and activate %s under %s permission </string>
+    <string name="enhance" translatable="false">Black &amp; White 1</string>
+    <string name="enhance_edit_header" translatable="false">Edit</string>
+    <string name="save_process_percent">Saved: %d/%d</string>
+    <string name="save_alert_input_invalid_name">"This name contains invalid characters (|?*\":>+[]/'©™®)"</string>
+    <string name="splash_policy_cta">Agree &amp; Continue</string>
+    <string name="all_share_title">Export</string>
+    <string name="all_percent">%d%%</string>
+    <string name="all_cache">cache_%s%s</string>
+    <string name="all_namesake_folder">%s(%d).%s</string>
+    <string name="all_namecurrenttime">%s_%d.%s</string>
+    <string name="all_name_current_time_ori">%s_%d.%s</string>
+    <string name="all_namecurrenttime_copy">%s_%d(%d).%s</string>
+    <string name="all_title_discard">Delete %s</string>
+    <string name="all_name_original">original_%d%s</string>
+    <string name="all_name_original_copy">original_%s</string>
+    <string name="all_name_folder_default">New Folder</string>
+    <string name="all_name_folder_default_duplicate">New Folder (%d)</string>
+    <string name="main_target_welcome_message">Welcome to %s, let\'s learn how to navigate yourself and get the finest
+        experience while using the app</string>
+    <string name="all_messege_delete">Are you sure you want to delete %s?</string>
+
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Notification">-->
+    <string name="app_notification_channel_name">Updates</string>
+    <string name="ad">Ad</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Home">-->
+    <string name="home_search">Search</string>
+    <string name="home_settings">Settings</string>
+    <string name="home_imports">Import</string>
+    <string name="home_send_to">Export</string>
+    <string name="home_move">Move</string>
+    <string name="home_merge">Merge</string>
+    <string name="home_delete">Delete</string>
+    <string name="home_empty_document">No document, scan now!</string>
+    <string name="home_sort_name">Sort by Name</string>
+    <string name="home_sort_data_created">Sort by Date Created</string>
+    <string name="home_sort_size">Sort by Size</string>
+    <string name="home_folders">Folders</string>
+    <string name="home_files">Documents</string>
+    <string name="home_send_to_pdf">pdf</string>
+    <string name="home_send_to_jpg">jpg</string>
+    <string name="home_created_folder">Create new folder</string>
+    <string name="home_exit_title">Double tap to exit</string>
+    <string name="home_rename">Rename</string>
+    <string name="home_folder_exits">Folder already exists!</string>
+    <string name="home_document_exits">Document already exists!</string>
+    <string name="home_folder_et_empty">Please enter folder name!</string>
+    <string name="home_folder_created_success">The folder has been created successfully!</string>
+    <string name="home_delete_title">Are you sure you want to delete?</string>
+    <string name="home_accept_delete">Yes</string>
+    <string name="home_deni_delete">No</string>
+    <string name="home_share_to_gallery_complete">Export image to gallery complete!</string>
+    <string name="home_share_to_gallery">Export to Gallery</string>
+    <string name="home_delete_item">Delete item</string>
+    <string name="home_and">and</string>
+    <string name="home_error_create_folder">Error to create folder, please try again!</string>
+    <string name="home_content_delete">Are you sure you want to delete selected %s?</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="DetailPage">-->
+    <string name="detail_page_save_complete">Save the completed changes!</string>
+    <string name="detail_renaming">Please Exit rename status!</string>
+    <string name="detail_new_document">New Document</string>
+    <!--</editor-fold>-->
+
+    <string name="detail_document_exit_drag">Please exists status drag page</string>
+    <string name="detail_document_drag_enable">Enable drag page state</string>
+    <string name="detail_document_drag_disable">Disable drag page state</string>
+
+    <!--<editor-fold desc="Settings">-->
+    <string name="settings_settings">Settings</string>
+    <string name="settings_general_title">General</string>
+    <string name="settings_default_filter">Default Filter</string>
+    <string name="settings_auto_save_title">Auto save with default name</string>
+    <string name="settings_auto_save_enable">Don\'t show the rename dialog before saving documents</string>
+    <string name="settings_auto_save_disable">Show the rename dialog before saving documents</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="PDF Settings">-->
+    <string name="pdf_settings_title">PDF Settings</string>
+    <string name="pdf_settings_page_orientation">PDF Page Orientation</string>
+    <string name="pdf_settings_portrait">Portrait</string>
+    <string name="pdf_settings_landscape">Landscape</string>
+    <string name="pdf_settings_page_size">PDF Page Size</string>
+    <string name="pdf_settings_page_save_patch">PDF save directory</string>
+    <string name="pdf_settings_page_number">PDF Page Number</string>
+    <string name="pdf_settings_hide_page_number">Hide page number</string>
+    <string name="pdf_settings_show_page_number">Show page number</string>
+    <string name="pdf_settings_page_margin">PDF Page Margin</string>
+    <string name="pdf_settings_add_margin_page">Add margin on PDF Page</string>
+    <string name="pdf_settings_no_margin_page">No margin on PDF Page</string>
+    <string name="pdf_settings_size_letter" translatable="false">Letter (216mm*279mm)</string>
+    <string name="pdf_settings_size_a4" translatable="false">A4 (210mm*297mm)</string>
+    <string name="pdf_settings_size_legal" translatable="false">Legal (216mm*356mm)</string>
+    <string name="pdf_settings_size_a3" translatable="false">A3 (297mm*420mm)</string>
+    <string name="pdf_settings_size_a5" translatable="false">A5 (148mm*210mm)</string>
+    <string name="pdf_settings_size_bussiness_card" translatable="false">Business Card (85*55mm)</string>
+    <string name="pdf_settings_send_to">Send to…</string>
+    <string name="pdf_settings_save_dir">Pdf stored in: %s</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Permission">-->
+    <string name="camera_request_permission_title">Camera permission required</string>
+    <string name="storage_request_permission_title">Storage permission required</string>
+    <string name="button_allow_text">GO TO SETTINGS</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Camera Activity">-->
+    <string name="camera_auto_flash_mode" translatable="false">Flash Mode: Auto</string>
+    <string name="camera_flash_mode_off" translatable="false">Flash Mode: Off</string>
+    <string name="camera_flash_mode_on" translatable="false">Flash Mode: On</string>
+    <string name="camera_single_mode_on" translatable="false">Single Mode</string>
+    <string name="camera_batch_mode_on" translatable="false">Batch Mode</string>
+    <string name="camera_discard_dialog_title">Discard All</string>
+    <string name="camera_discard_capture_dialog_title">Discard Capture</string>
+    <string name="camera_positive_dialog_option">Discard</string>
+    <string name="camera_prompt_discard_message">Are you sure to discard all captured images?</string>
+    <!--    <string name="camera_delete_success_message">Successfully Deleted</string>-->
+    <string name="camera_negative_dialog_option">No</string>
+    <string name="camera_caputure_error">Capture image error, please try again!</string>
+    <string name="camera_target_batch_mode">Batch mode helps you to capture multiple images at a
+    time</string>
+    <string name="camera_target_single_mode">To add on, Single mode allows you to capture one image at a time</string>
+    <string name="camera_target_flash_mode">Quickly change the flash mode by tapping on</string>
+    <string name="camera_target_grid_mode">Click this button to show/hide gridlines</string>
+    <string name="camera_target_start_camera">Camera is probably your best friend to help you scanning
+        documents</string>
+
+    <string name="camera_preview_recapture">If the image is blurred, you can retake it.</string>
+    <string name="camera_preview_confirm">If all images are okey, you can save the document by clicking this button.</string>
+    <string name="camera_preview_title">Preview</string>
+    <string name="camera_preview_position">%d/%d</string>
+    <string name="camera_preview_delete">If you don\'t need the image anymore, you can delete it.</string>
+    <string name="camera_preview_type_show">Click this button to switch view mode.</string>
+    <string name="camera_preview_select_empty">Please! Select an image to retake.</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Detect Activity">-->
+    <string name="detect_select_crop_invalid">"Can\'t crop, please select again!"</string>
+    <string name="detect_alert_error_warp_image">"Error to crop!"</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Enhance Activity">-->
+    <string name="enhance_filter_mode_original" translatable="false">Original</string>
+    <string name="enhance_filter_mode_grey_scale" translatable="false">Grey Scale</string>
+    <string name="enhance_filter_mode_magic_color" translatable="false">Magic Color</string>
+    <string name="enhance_filter_mode_bnw2" translatable="false">Black &amp; White 2</string>
+    <string name="enhance_filter_mode_no_shadow" translatable="false">No Shadow</string>
+    <string name="enhance_error_save">"Error to save enhance image!"</string>
+    <string name="enhance_crop_title">Crop</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Save Activity">-->
+    <string name="save_delete_dialog_title">Remove page</string>
+    <string name="save_delete_dialog_message">Are you sure to remove this page?</string>
+    <string name="save_delete_dialog_positive_cta">Remove</string>
+    <string name="save_delete_dialog_negative_cta">Cancel</string>
+    <string name="save_discard_save_dialog_title">Discard document</string>
+    <string name="save_discard_page_dialog_title">Discard page</string>
+    <string name="save_discard_save_dialog_message">Are you sure to discard this document?</string>
+    <string name="save_discard_save_dialog_positive_cta">Discard</string>
+    <string name="save_discard_save_dialog_negative_cta">Cancel</string>
+    <string name="save_show_dialog_discard_confirm">Are you sure to discard this page?</string>
+    <string name="save_show_dialog_discard_page_change_confirm">Are you sure to discard this page?</string>
+    <string name="discard_change_detail_page_confirm">Are you sure you want to discard change this page ?</string>
+    <string name="save_alert_input_error_dialog_title">Invalid Name</string>
+    <string name="save_alert_input_error_dialog_positive_cta">OK</string>
+    <string name="save_alert_input_empty_name">"Please enter document name"</string>
+    <string name="save_alert_input_duplicate_name">"This name is already used. Please choose another name!"</string>
+    <string name="save_alert_filter_on_process">Filter is on processing try again later</string>
+    <string name="save_alert_multiple_filter_processing">"Filter is on processing try again later!"</string>
+    <string name="save_all_alert_saving_file">"Saving file, please wait!"</string>
+    <string name="save_single_document_title">Save Document</string>
+    <string name="save_single_document_checkbox">"Don't show again"</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Update">-->
+    <string name="update_download_success">An update has been downloaded</string>
+    <string name="update_success_cta">OK</string>
+    <string name="update_title">Update available!</string>
+    <string name="update_content">Some bugs have been fixed in new version, and the experience is better.</string>
+    <string name="update_btn_update">Update Now!</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Settings Activity">-->
+    <string name="settings_rate_us">Rate us</string>
+    <string name="settings_about_us">About us</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_do_no_show_page_number">Do not show page number</string>
+    <string name="settings_show_margin_on_pdf_page">Show margin on PDF page</string>
+    <string name="settings_last_used_filter">Last used filter</string>
+    <string name="policy_actvity_title">Policy</string>
+    <string name="about_app_policy_first_part">By proceeding, you argree with</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="Spotlight">-->
+    <string name="spotlight_got_it">Got it</string>
+    <string name="spotlight_let_go">Let\'s go</string>
+    <string name="spotlight_target_skip">Skip</string>
+    <string name="main_target_utility_bar">Utility bar helps you to better manage your files</string>
+    <string name="main_target_settings">You can change the app\'s settings</string>
+    <string name="main_target_import">Alternatively, you can import photos from your gallery</string>
+    <string name="main_target_folder_showcase">All your folders and documents will be displayed here to view and manage easily</string>
+    <string name="main_target_camera">To access the camera for scanning documents, you need to tap on this icon</string>
+
+    <string name="detect_target_polygon_view">Feel free to drag the sides and corners to get the best fit
+        image</string>
+    <string name="detect_target_select_all">This is a shortcut to select a small part or the entire portion of the
+        image</string>
+    <string name="detect_target_tick">After getting your best fit image, let\'s proceed to the next stage</string>
+    <string name="enhance_target_filter_bar">Pick a filter to improve readability and visibility</string>
+    <string name="enhance_target_crop">Not happy with your crop, want to crop again? Let\'s crop</string>
+    <string name="enhance_target_rotate">The rotating function allows you to rotate the image by 90 degrees in
+        clockwise direction</string>
+    <string name="enhance_target_tick">Let\'s move to next stage to save and rename</string>
+    <string name="save_target_tick">You are happy with your image, ain\'t you? Let\'s save it</string>
+    <string name="save_target_rename_name_field">Don\'t like the default document name? You can change it here</string>
+    <string name="save_target_remove_name_folder">Tap this button to quickly remove the document\'s name</string>
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="String Dùng Chung">-->
+    <string name="all_select">Select All</string>
+    <string name="all_unselect">Deselect All</string>
+    <string name="all_cancel">Cancel</string>
+    <string name="all_folders">Folders</string>
+    <string name="all_original" translatable="false">original</string>
+    <string name="all_new_document">Create new document</string>
+    <string name="all_title_single_discard">Delete document</string>
+    <string name="all_message_single_delete">Are you sure you want to delete this document?</string>
+    <string name="all_detail_copy">Copy</string>
+    <string name="all_detail_copy_complete">Copy file complete!</string>
+    <string name="all_move_file_title">Move to</string>
+    <string name="all_move_file_action">Move to</string>
+    <string name="all_copy_file_title">Copy to</string>
+    <string name="all_new_folder_title">New Folder</string>
+    <string name="all_new_folder_name_folder">Enter folder name</string>
+    <string name="all_detail_folder_move_out">Move out</string>
+    <string name="all_alert_file_processing">Processing, please wait!</string>
+    <!--</editor-fold>-->
+
+
+    <string name="title_all_capture">All Page Capture</string>
+    <string name="recapture_status">ReCapture complete!</string>
+    <string name="all_share_quality">Quality</string>
+    <string name="all_share_quality_low">Low</string>
+    <string name="all_share_quality_medium">Medium</string>
+    <string name="all_share_quality_high">High</string>
+    <string name="all_share_quality_max">Max</string>
+    <string name="all_share_save_as_pdf">Export as PDF</string>
+    <string name="all_share_pdf">Share PDF</string>
+    <string name="all_share_save_as_jpg">Export as JPG</string>
+    <string name="all_share_jpg">Share JPG</string>
+    <string name="pdf_success">Export PDF successfully!</string>
+    <string name="jpg_success">Export JPG successfully!</string>
+    <string name="pdf_open">Open File</string>
+    <string name="pdf_show_pdf">Share File</string>
+    <string name="jpg_show_jpg">Share File</string>
+    <string name="location_pdf">Location: %s</string>
+
+
+</resources>

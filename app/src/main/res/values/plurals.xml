@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <plurals name="count_folder">
+        <item quantity="one">%d folder</item>
+        <item quantity="two">%d folders</item>
+        <item quantity="few">%d folders</item>
+        <item quantity="many">%d folders</item>
+        <item quantity="other">%d folders</item>
+    </plurals>
+
+    <plurals name="count_document">
+        <item quantity="one">%d document</item>
+        <item quantity="two">%d documents</item>
+        <item quantity="few">%d documents</item>
+        <item quantity="many">%d documents</item>
+        <item quantity="other">%d documents</item>
+    </plurals>
+
+    <plurals name="count_page">
+        <item quantity="one">%d page</item>
+        <item quantity="two">%d pages</item>
+        <item quantity="few">%d pages</item>
+        <item quantity="many">%d pages</item>
+        <item quantity="other">%d pages</item>
+    </plurals>
+
+    <plurals name="count_folder_main">
+        <item quantity="one">folder</item>
+        <item quantity="two">folders</item>
+        <item quantity="few">folders</item>
+        <item quantity="many">folders</item>
+        <item quantity="other">folders</item>
+    </plurals>
+
+    <plurals name="count_document_main">
+        <item quantity="one"> document</item>
+        <item quantity="two"> documents</item>
+        <item quantity="few"> documents</item>
+        <item quantity="many"> documents</item>
+        <item quantity="other"> documents</item>
+    </plurals>
+
+
+</resources>

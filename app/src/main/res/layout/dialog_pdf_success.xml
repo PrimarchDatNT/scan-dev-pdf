@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:background="@drawable/home_shape_dialog_sort"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_success"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/pdfsettings_vector_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center"
+            android:text="@string/pdf_success"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/iv_success" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_success"
+            tools:text="Location: folder1/folder2/folder3/abc.jpg" />
+
+        <View
+            android:id="@+id/view_border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp24"
+            android:background="@color/color_border"
+            app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/color_border"
+            app:layout_constraintBottom_toBottomOf="@id/tv_open"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_border" />
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center"
+            android:text="@string/pdf_open"
+            android:textColor="@drawable/share_selector_state_tv"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toStartOf="@id/tv_show_in_folder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_border" />
+
+        <TextView
+            android:id="@+id/tv_show_in_folder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center"
+            android:text="@string/pdf_show_pdf"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_open"
+            app:layout_constraintTop_toBottomOf="@id/view_border" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

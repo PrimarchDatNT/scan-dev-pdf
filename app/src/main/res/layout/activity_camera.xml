@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.camera.CameraActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_camera_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleType="fillCenter" />
+
+    <com.document.camerascanner.features.view.GridLayerView
+        android:id="@+id/grid_layer_camera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_camera_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_capture_process"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_capture_image"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/cl_camera_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_camera_controller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_preview">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_flash"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickFlashMode"
+            android:src="@drawable/camera_selector_flash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/iv_camera"
+            app:layout_constraintStart_toEndOf="@id/iv_captured_image_holder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp16"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@null"
+            android:onClick="onClickTakePhoto"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_vector_take_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_multi_capture"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickMultiCaptureMode"
+            android:src="@drawable/camera_selector_batch_mode"
+            app:layout_constraintBottom_toBottomOf="@id/cl_camera_controller"
+            app:layout_constraintEnd_toStartOf="@+id/iv_single_capture"
+            app:layout_constraintStart_toEndOf="@+id/iv_camera"
+            app:layout_constraintTop_toTopOf="@id/cl_camera_controller"
+            tools:ignore="ContentDescription"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_single_capture"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickSingleMode"
+            android:src="@drawable/camera_selector_single_mode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_discard_all"
+            app:layout_constraintStart_toEndOf="@id/iv_multi_capture"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_discard_all"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:onClick="discardAll"
+            android:src="@drawable/new_file_vector_x"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_tick_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_single_capture"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tick_icon"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onClickConfirmCapture"
+            android:padding="4dp"
+            android:src="@drawable/all_vector_tick"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/iv_discard_all"
+            app:layout_constraintTop_toTopOf="@id/cl_camera_controller"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_captured_image_holder"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp40"
+            android:onClick="onClickPreViewImage"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_flash"
+            app:layout_constraintTop_toTopOf="@id/cl_camera_controller"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_image_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/camere_vector_image_counter"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/iv_captured_image_holder"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/iv_captured_image_holder"
+            app:layout_constraintStart_toStartOf="@id/iv_captured_image_holder"
+            app:layout_constraintTop_toTopOf="@id/iv_captured_image_holder"
+            tools:text="60"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/view_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_grid"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_margin="@dimen/dp20"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="onClickShowGrid"
+        android:src="@drawable/camera_selector_status_grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fr_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

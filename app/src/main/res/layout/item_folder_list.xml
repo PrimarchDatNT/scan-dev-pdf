@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container_folder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/all_ripple_background_white_click"
+    android:padding="@dimen/dp10">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:padding="@dimen/dp2"
+        android:src="@drawable/all_vector_item_select"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_represent"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_vector_folderlagre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="49:60"
+        app:layout_constraintLeft_toRightOf="@id/iv_select"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_option"
+        app:layout_constraintStart_toEndOf="@id/iv_represent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingStart="@dimen/dp14"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp14"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_page_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp14"
+            android:textColor="@color/color_text_orange"
+            android:textSize="@dimen/sp12"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_option"
+        android:layout_width="@dimen/dp28"
+        android:layout_height="@dimen/dp28"
+        android:background="?attr/selectableItemBackground"
+        android:padding="6dp"
+        android:src="@drawable/home_vector_option"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

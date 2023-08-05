@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".features.settings.SettingsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_white"
+            android:onClick="onClickBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/all_vector_back_black"
+            app:title="@string/settings_settings"
+            app:titleTextAppearance="@style/Toolbar.TextTilte" />
+
+        <TextView
+            android:id="@+id/tv_settings_general"
+            style="@style/SettingsTextViewContent"
+            android:layout_marginTop="@dimen/dp12"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:text="@string/settings_general_title"
+            android:textColor="@color/color_faded_gray"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toTopOf="@+id/ll_settings_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tb" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_settings_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickChangeFilter"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_general">
+
+            <TextView
+                android:id="@+id/tv_settings_filter_title"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="@string/settings_default_filter"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_settings_default_filter"
+                style="@style/PdfSettingsTextViewContent"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="@string/enhance_filter_mode_original"
+                android:textSize="@dimen/sp12" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/ll_auto_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickAutoSave"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:weightSum="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_settings_filter">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_auto_save"
+                    style="@style/PdfSettingsTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_auto_save_title"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/tv_content_auto_save"
+                    style="@style/PdfSettingsTextViewContent"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:text="@string/settings_auto_save_enable"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/sw_auto_save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:checked="true"
+                android:theme="@style/switchStyle"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_settings_quality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickShowQuality"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_auto_save">
+
+            <TextView
+                android:id="@+id/tv_quality"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/all_share_quality"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_content_quality"
+                style="@style/PdfSettingsTextViewContent"
+                android:layout_marginTop="@dimen/dp2"
+                android:textSize="@dimen/sp12"
+                tools:text="Max" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tv_settings_pdf"
+            style="@style/SettingsTextViewContent"
+            android:layout_marginTop="@dimen/dp20"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:text="@string/pdf_settings_title"
+            android:textColor="@color/color_faded_gray"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toTopOf="@+id/ll_settings_pdf_orientation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_settings_quality" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_settings_pdf_orientation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickChangePageOrientation"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_pdf">
+
+            <TextView
+                android:id="@+id/tv_settings_pdf_title"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pdf_settings_page_orientation"
+                android:textSize="@dimen/sp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_orientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:src="@drawable/pdf_settings_vector_portrait"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_settings_pdf_orientation"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_settings_pdf_orientation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_settings_pdf_orientation"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_settings_pdf_orientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center|start"
+                    android:text="@string/pdf_settings_portrait"
+                    android:textColor="@color/color_text_orange"
+                    android:textSize="@dimen/sp12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_orientation" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_settings_pdf_page_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickShowPageSize"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_settings_pdf_orientation">
+
+            <TextView
+                android:id="@+id/tv_settings_pdf_page_size_title"
+                style="@style/PdfSettingsTextViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pdf_settings_page_size"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_settings_pdf_page_size"
+                style="@style/PdfSettingsTextViewContent"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="@string/pdf_settings_size_letter"
+                android:textSize="@dimen/sp12" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <LinearLayout
+            android:id="@+id/ll_container_page_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="showPageNumber"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:weightSum="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_settings_pdf_page_size">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pdf_page_number"
+                    style="@style/PdfSettingsTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pdf_settings_page_number"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/tv_content_pdf_page_number"
+                    style="@style/PdfSettingsTextViewContent"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:text="@string/pdf_settings_show_page_number"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/sw_pdf_page_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:checked="true"
+                android:theme="@style/switchStyle"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_container_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:onClick="onClickShowPageMargin"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:weightSum="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_container_page_number">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pdf_page_margin"
+                    style="@style/PdfSettingsTextViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pdf_settings_page_margin"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/tv_content_pdf_page_margin"
+                    style="@style/PdfSettingsTextViewContent"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:text="@string/pdf_settings_no_margin_page"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/sw_pdf_page_margin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:checked="true"
+                android:theme="@style/switchStyle"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="?selectableItemBackground"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:text="@string/settings_about_us"
+            android:textColor="@color/color_faded_gray"
+            android:textSize="@dimen/sp12"
+
+            app:layout_constraintBottom_toTopOf="@id/tv_rate_us"
+            app:layout_constraintTop_toBottomOf="@id/ll_container_four" />
+
+        <TextView
+            android:id="@+id/tv_rate_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="start|center_vertical"
+            android:onClick="onClickRateUs"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/settings_rate_us"
+            android:textSize="@dimen/sp14"
+
+            app:layout_constraintBottom_toTopOf="@id/tv_privacy_policy"
+            app:layout_constraintTop_toBottomOf="@id/tv_about_us" />
+
+        <TextView
+            android:id="@+id/tv_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="?selectableItemBackground"
+            android:gravity="start|center_vertical"
+            android:onClick="onClickPrivacyPolicy"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/settings_privacy_policy"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rate_us" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
